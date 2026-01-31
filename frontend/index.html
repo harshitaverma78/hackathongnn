@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AML Illicit Wallet Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>AML Wallet Explorer</h1>
+</header>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <aside>
+    <h2>Illicit Wallets</h2>
+    <ul id="walletList"></ul>
+  </aside>
+
+  <!-- RIGHT -->
+  <main>
+    <section id="walletInfo">
+      <h2>Select a wallet</h2>
+      <p>Click an illicit wallet to visualize activity</p>
+    </section>
+
+    <section class="controls">
+      <button onclick="loadFanOut()">Fan Out</button>
+      <button onclick="loadFanIn()">Fan In</button>
+      <button onclick="loadPeeling()">Peeling Paths</button>
+      <button onclick="loadGNN()">GNN Proximity</button>
+    </section>
+
+    <section id="graphContainer">
+      <svg id="graph" width="800" height="400"></svg>
+      <div class="legend">
+        🔴 Selected Wallet &nbsp;
+        🟢 Fan-Out &nbsp;
+        🟡 Fan-In &nbsp;
+        🔵 GNN Similar
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

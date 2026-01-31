@@ -91,8 +91,8 @@ proximity_score = 1 - scaler.fit_transform(
 # FINAL SUSPICION SCORE
 # -------------------------------
 final_score = (
-    0.6 * anomaly_score +
-    0.4 * proximity_score
+    0.3 * anomaly_score +
+    0.7 * proximity_score
 )
 
 # -------------------------------

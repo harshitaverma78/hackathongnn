@@ -4,7 +4,7 @@ import numpy as np
 from torch_geometric.data import Data
 
 def load_data():
-    df = pd.read_csv("data/etherium_dataset.csv")
+    df = pd.read_csv("data/ethereum_transactions.csv")
 
     # Ensure numeric
     df["value"] = pd.to_numeric(df["value"], errors="coerce").fillna(0)
